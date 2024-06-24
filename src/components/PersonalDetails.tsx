@@ -1,13 +1,17 @@
 import {Link} from "react-router-dom";
+import {FormCard} from "./core/FormCard.tsx";
+
+import {BackButton} from "./core/BackButton.tsx";
 
 export const PersonalDetails = () => {
     return (
-        <div>
-            <Link to="/">
-                Go Back
-            </Link>
-            PersonalDetails
-            <Link to={'/salary-details'}> Next</Link>
+        <div className="mx-14 mt-8">
+            <BackButton href={'/'}/>
+            <div>
+                <FormCard href={'/salary-details'}>
+                    Personal Details
+                </FormCard>
+            </div>
         </div>
     );
 };
