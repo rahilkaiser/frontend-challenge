@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 export const PersonalDetails = () => {
     return (
         <div>
-            <Link to="/" className="link-class">
+            <Link to="/">
                 Go Back
             </Link>
             PersonalDetails

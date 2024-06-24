@@ -5,7 +5,7 @@ export const Summary = () => {
 
     return (
         <div>
-            <Link to="/salary-details" className="link-class">
+            <Link to="/salary-details">
                 Go Back
             </Link>
             Summary
