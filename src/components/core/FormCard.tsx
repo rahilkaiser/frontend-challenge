@@ -4,6 +4,7 @@ import {motion} from "framer-motion";
 
 interface FormCardProps {
     onSubmit: () => void;
+    children?: React.ReactNode;
     isFinalSubmissionButton?: boolean
 }
 

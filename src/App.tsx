@@ -1,5 +1,5 @@
 import './App.css'
-import {BrowserRouter, Route, Router, Routes, useLocation} from "react-router-dom";
+import {BrowserRouter, Route, Routes, useLocation} from "react-router-dom";
 import {Home} from "./components/Home.tsx";
 import {PersonalDetails} from "./components/PersonalDetails.tsx";
 import {SalaryDetails} from "./components/SalaryDetails.tsx";
