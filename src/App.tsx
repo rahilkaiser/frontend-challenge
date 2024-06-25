@@ -9,6 +9,7 @@ import {ProgressIndicator} from "./components/core/ProgressIndicator.tsx";
 function App() {
 
     return (
+
         <BrowserRouter>
             <ProgressIndicator/>
             <Routes>
@@ -18,6 +19,7 @@ function App() {
                 <Route path="/summary" element={<Summary/>}/>
             </Routes>
         </BrowserRouter>
+
     )
 }
 
