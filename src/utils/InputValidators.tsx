@@ -16,7 +16,7 @@ export const validateEmail = (value: string) => {
 };
 
 export const validatePhoneNumber = (value: string) => {
-    const phoneRegex = /^[0-9]{10,15}$/;
+    const phoneRegex = /^\s*\+?[0-9\s]{10,15}\s*$/;
     if (!value) return 'Phone number is required';
     if (!phoneRegex.test(value)) return 'Invalid phone number format';
     return '';

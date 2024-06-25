@@ -4,10 +4,10 @@ import {CustomInputField} from "./core/CustomInputField.tsx";
 import useStore from "../store/userStore.tsx";
 import {validateEmail, validateForename, validatePhoneNumber, validateSurname} from "../utils/InputValidators.tsx";
 import {useState} from "react";
-import { useNavigate } from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 
 export const PersonalDetails = () => {
-    const { userDetails, setUserDetails } = useStore();
+    const {userDetails, setUserDetails} = useStore();
     const navigate = useNavigate();
     const [errors, setErrors] = useState({
         forename: '',
@@ -44,7 +44,7 @@ export const PersonalDetails = () => {
                     key={"forename"}
                     value={userDetails.forename}
                     onChange={(e) => {
-                        setUserDetails({ forename: e.target.value });
+                        setUserDetails({forename: e.target.value});
                     }}
                     errorMessage={errors.forename}
                 ></CustomInputField>
@@ -52,7 +52,7 @@ export const PersonalDetails = () => {
                                   key={"surname"}
                                   value={userDetails.surname}
                                   onChange={(e) => {
-                                      setUserDetails({ surname: e.target.value });
+                                      setUserDetails({surname: e.target.value});
                                   }}
                                   errorMessage={errors.surname}
                 ></CustomInputField>
@@ -60,7 +60,7 @@ export const PersonalDetails = () => {
                                   key={"mail"}
                                   value={userDetails.email}
                                   onChange={(e) => {
-                                      setUserDetails({ email: e.target.value });
+                                      setUserDetails({email: e.target.value});
                                   }}
                                   errorMessage={errors.email}
                 ></CustomInputField>
@@ -68,7 +68,7 @@ export const PersonalDetails = () => {
                                   key={"phone"}
                                   value={userDetails.phoneNumber}
                                   onChange={(e) => {
-                                      setUserDetails({ phoneNumber: e.target.value });
+                                      setUserDetails({phoneNumber: e.target.value});
                                   }}
                                   errorMessage={errors.phoneNumber}
                 ></CustomInputField>
