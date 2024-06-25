@@ -1,8 +1,11 @@
-import {useState} from "react";
+interface CustomInputFieldProps {
+    label: string;
+    key: string;
+    value: string;
+    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}
 
-export const CustomInputField = ({key,label}) => {
-    const [value, setValue] = useState('');
-
+export const CustomInputField: React.FC<CustomInputFieldProps> = ({key, label, value, onChange}) => {
     return (
         <div className="relative">
             <input
@@ -10,7 +13,7 @@ export const CustomInputField = ({key,label}) => {
                 id={key}
                 name={key}
                 value={value}
-                onChange={(e) => setValue(e.target.value)}
+                onChange={onChange}
                 className="peer h-10 w-full border-b-2 border-gray-300 text-gray-900 placeholder-transparent focus:outline-none focus:border-transparent"
                 placeholder={label}
                 required
