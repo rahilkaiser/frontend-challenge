@@ -1,30 +1,59 @@
-# React + TypeScript + Vite
+# Frontend Challenge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Table of Contents
 
-Currently, two official plugins are available:
+1. [Introduction](#introduction)
+2. [Tech Stack](#tech-stack)
+3. [Features](#features)
+4. [Quick Start](#quick-start)
+5. [Live Demo](#live-demo)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Introduction
 
-## Expanding the ESLint configuration
+Welcome to the Frontend Challenge project! This application is designed to demonstrate the use of React for building interactive and responsive user interfaces. The project leverages Zustand for state management and TailwindCSS for styling, and it is built using Vite for fast and efficient development.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Tech Stack
 
-- Configure the top-level `parserOptions` property like this:
+- **React**: JavaScript library for building user interfaces.
+- **Zustand**: State management solution.
+- **TailwindCSS**: Utility-first CSS framework.
+- **TypeScript**: Superset of JavaScript that adds static types.
+- **React Router**: Declarative routing for React applications.
+- **Framer Motion**: Animation library for React.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Features
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- **State Management**: Efficient state management using Zustand.
+- **Responsive Design**: Optimized for both mobile and desktop views.
+- **Form Validation**: Custom form validation for user inputs.
+- **Smooth Transitions**: Seamless animations using Framer Motion.
+- **Dynamic Routing**: Navigate between different pages using React Router.
+
+## Quick Start
+
+### Prerequisites
+
+Ensure you have the following installed:
+
+- **Git**: Version control system.
+- **Node.js**: JavaScript runtime.
+- **NPM**: Node package manager.
+
+### Installation
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/rahilkaiser/frontend-challenge.git
+   cd frontend-challenge 
+2. **Install dependencies**:
+   ```bash
+   npm install
+3. **Run the React application**:
+   ```bash
+   npm run dev
+
+Navigate to http://localhost:5173 in your web browser to view the application.
+
+### Live Demo
+
+Check out the live demo [here](https://buena-frontend-challenge.netlify.app/).
