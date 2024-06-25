@@ -1,4 +1,5 @@
 import create from 'zustand';
+import {persist} from "zustand/middleware";
 
 interface UserDetails {
     forename: string;
@@ -14,17 +15,22 @@ interface UserState {
     setUserDetails: (details: Partial<UserDetails>) => void;
 }
 
-const useStore = create<UserState>((set) => ({
-    userDetails: {
-        forename: '',
-        surname: '',
-        email: '',
-        phoneNumber: '',
-    },
-    selectedSalaryRange: '',
-    setUserDetails: (details) => set((state) => ({userDetails: {...state.userDetails, ...details}})),
-    setSelectedSalaryRange: (salaryRange) => set({ selectedSalaryRange: salaryRange }),
-
-}));
+const useStore = create<UserState>( persist(
+    (set) => ({
+        userDetails: {
+            forename: '',
+            surname: '',
+            email: '',
+            phoneNumber: '',
+        },
+        selectedSalaryRange: '',
+        setUserDetails: (details) =>
+            set((state) => ({ userDetails: { ...state.userDetails, ...details } })),
+        setSelectedSalaryRange: (salaryRange) => set({ selectedSalaryRange: salaryRange }),
+    }),
+    {
+        name: 'user-store',
+    }
+));
 
 export default useStore;
