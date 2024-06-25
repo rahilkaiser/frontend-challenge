@@ -13,7 +13,7 @@ export const FormCard:React.FC<FormCardProps>  = ({ children, href }) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeInOut" }}
-            className="max-w-md mx-auto mt-10 p-8 border rounded-lg shadow-lg bg-white flex flex-col space-y-12">
+            className="max-w-md mx-auto mt-10 p-8 border rounded-lg shadow-lg bg-white flex flex-col space-y-12 text-center font-inter">
             {children}
             {href ? <Link to={href} className="bg-black text-white px-4 py-2 rounded hover:bg-opacity-75 transition duration-300">
                 Continue

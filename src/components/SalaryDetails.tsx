@@ -39,7 +39,7 @@ export const SalaryDetails = () => {
                             <div className={`relative text-gray-700`}>
                                 {option.label}
                                 <span
-                                    className={`absolute bottom-0 left-0 w-full h-0.5 bg-black transition-all duration-500 ease-in-out ${selected === option.value ? 'w-full' : 'w-0'}`}></span>
+                                    className={`absolute bottom-0 left-0 w-0 h-0.5 bg-black transition-all duration-500 ease-in-out ${selected === option.value ? 'w-full' : 'w-0'}`}></span>
                             </div>
                         </label>
                     ))}</div>
