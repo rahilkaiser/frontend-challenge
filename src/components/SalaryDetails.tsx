@@ -1,10 +1,13 @@
 import {BackButton} from "./core/BackButton.tsx";
 import {FormCard} from "./core/FormCard.tsx";
 import useStore from "../store/userStore.tsx";
+import {useNavigate} from "react-router-dom";
+import {useState} from "react";
 
 
 export const SalaryDetails = () => {
-
+    const navigate = useNavigate();
+    const [error, setError] = useState('');
     const salaryOptions = [
         {label: '0 - 1,000', value: '0-1000'},
         {label: '1,000 - 2,000', value: '1000-2000'},
@@ -16,13 +19,22 @@ export const SalaryDetails = () => {
     const { selectedSalaryRange, setSelectedSalaryRange } = useStore();
     const handleChange = (value: string) => {
         setSelectedSalaryRange(value);
+        setError('');
+    };
+
+    const handleSubmit = () => {
+        if (!selectedSalaryRange) {
+            setError('At least one salary range must be selected');
+            return;
+        }
+        navigate('/summary');
     };
 
 
     return (
         <div className="mx-14 mt-8">
             <BackButton href={'/personal-details'}/>
-            <FormCard href={'/summary'}>
+            <FormCard onSubmit={handleSubmit}>
                 <h2 className="text-xl font-semibold ">Choose Your Salary Range</h2>
                 <div className="flex flex-col items-start  space-y-4 cursor-pointer">
                     {salaryOptions.map((option, index) => (
@@ -41,7 +53,10 @@ export const SalaryDetails = () => {
                                     className={`absolute bottom-0 left-0 w-0 h-0.5 bg-black transition-all duration-500 ease-in-out ${selectedSalaryRange === option.value ? 'w-full' : 'w-0'}`}></span>
                             </div>
                         </label>
-                    ))}</div>
+                    ))}
+                    {error && <p className="text-red-500 text-xs mt-1">{error}</p>}
+                </div>
+
             </FormCard>
         </div>
     );

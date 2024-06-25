@@ -13,7 +13,7 @@ export const Summary = () => {
     return (
         <div className="mx-14 mt-8">
             <BackButton href={'/salary-details'}/>
-            <FormCard href={null}>
+            <FormCard isFinalSubmissionButton={true} onSubmit={()=> {}}>
                 <h2 className="text-xl font-semibold ">Summary of Your Details</h2>
                 <div className="space-y-3 text-start mx-auto">
                     <p><strong className="text-gray-600">Forename:</strong> {userDetails.forename}</p>
